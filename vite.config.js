@@ -16,4 +16,18 @@ export default defineConfig({
     // https://cn.vitejs.dev/config/#resolve-extensions
     extensions: ['.mjs', '.js', '.ts', '.jsx', '.tsx', '.json', '.vue']
   },
+  // vite 相关配置
+  server: {
+    port: 8089,
+    host: true,
+    open: true,
+    proxy: {
+      // https://cn.vitejs.dev/config/#server-proxy
+      '/api': {
+        target: 'http://localhost:3000',
+        changeOrigin: true,
+        rewrite: (p) => p.replace(new RegExp('^\\' + '/api'), '')
+      }
+    }
+  },
 })

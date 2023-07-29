@@ -35,6 +35,12 @@ export const constantRoutes = [
                 component: () => import('@/views/goods'),
                 name: 'Goods',
                 meta: {title: '商品管理', icon: 'dashboard', affix: true}
+            },
+            {
+                path: '/menu',
+                component: () => import('@/views/menu'),
+                name: 'Menu',
+                meta: {title: '菜单管理', icon: 'dashboard', affix: true}
             }
         ]
     },

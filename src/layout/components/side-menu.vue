@@ -21,10 +21,10 @@ const props = defineProps({
                 <span>商品管理</span>
             </template>
         </el-menu-item>
-        <el-menu-item index="/good3">
+        <el-menu-item index="/menu">
             <el-icon><Menu /></el-icon>
             <template #title>
-                <span>分类管理</span>
+                <span>菜单管理</span>
             </template>
         </el-menu-item>
     </el-menu>
