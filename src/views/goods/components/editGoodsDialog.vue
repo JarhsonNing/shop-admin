@@ -96,7 +96,7 @@ const handleSubmit = () => {
         })
     } else {
         if (formData.file) {
-            return saveFile(formData.file).then(file => {
+            return saveFile(data).then(file => {
                 formData.image = file.code;
                 return updateGoods(formData.id, formData).then(() => {
                     dialogResolve();

@@ -7,7 +7,7 @@
                 </el-form-item>
             </el-form>
             <div class="select-goods-list">
-                <template v-for="goods in filterGoodsList">
+                <template v-for="goods in filterGoodsList" :key="goods.name">
                     <div
                         :class="{
                             'select-goods-item': true,

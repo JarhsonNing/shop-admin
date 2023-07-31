@@ -33,7 +33,7 @@
             <el-button type="primary" @click="handleAddNew">新增</el-button>
             <edit-goods-dialog ref="editGoodsDialog" />
         </div>
-        <template v-for="goods in goodsList">
+        <template v-for="goods in goodsList" :key="goods.name">
             <goods-card :goods="goods" :reload="fetchTableData" show-delete @click="handleModify(goods)"></goods-card>
         </template>
     </div>
@@ -51,6 +51,7 @@
     align-items: flex-start;
     align-content: flex-start;
     flex-wrap: wrap;
+    overflow-y: scroll;
 }
 
 .goods-list-operation {
@@ -58,6 +59,9 @@
     padding: 12px;
     border-radius: 12px;
     background-color: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 10000;
 }
 
 </style>
